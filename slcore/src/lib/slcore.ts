@@ -12,6 +12,7 @@ export { default as SlButton } from '@shoelace-style/shoelace/dist/components/bu
 export { default as SlColorPicker } from '@shoelace-style/shoelace/dist/components/color-picker/color-picker.js';
 export { default as SlIcon } from '@shoelace-style/shoelace/dist/components/icon/icon.js';
 export { default as SlRating } from '@shoelace-style/shoelace/dist/components/rating/rating.js';
+export * from '@shoelace-style/shoelace/dist/themes/dark.css';
 export * from '@shoelace-style/shoelace/dist/themes/light.css';
 import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path.js';
 
