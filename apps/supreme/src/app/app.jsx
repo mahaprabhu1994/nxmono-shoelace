@@ -5,9 +5,10 @@
 import { useEffect, useRef, useState } from 'react';
 
 import '../../../../dist/slcore/index';
-import { SlButton } from '../../../../dist/slcore/index';
 import '../../../../dist/slcore/style.css';
 // import "./theme.css";
+import { Button } from '../../../../dist/shadcn/index';
+import '../styles.css';
 
 export function App() {
   //toggle button
@@ -78,7 +79,7 @@ export function App() {
       {/* <sl-button variant="neutral" outline onClick={toggleTheme}>
         {isDarkMode ? light : dark}
       </sl-button> */}
-      <SlButton variant="success">Alll</SlButton>
+      {/* <SlButton variant="success">Alll</SlButton> */}
 
       <div>
         <sl-button onClick={toggleTheme}>{isDarkMode ? light : dark} </sl-button>
@@ -219,7 +220,12 @@ export function App() {
 
       </div>
 
-
+      <div>
+        <Button variant="secondary">Welcome to shadcn</Button>
+      </div>
+      <div className='w-[300px] h-[300px] bg-green-300'>
+        <h1 >ss</h1>
+      </div>
 
 
     </div >

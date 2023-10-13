@@ -1,0 +1,23 @@
+{
+  "name": "shadcn",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "shadcn/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/shadcn"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["shadcn/**/*.ts", "shadcn/package.json"]
+      }
+    }
+  },
+  "tags": []
+}

@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@supreme/shadcn": ["shadcn/src/index.ts"],
       "@supreme/slcore": ["slcore/src/index.ts"]
     }
   },
