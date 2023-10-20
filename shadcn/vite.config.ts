@@ -1,29 +1,22 @@
 /// <reference types="vitest" />
-import { defineConfig } from 'vite';
-
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
-import react from "@vitejs/plugin-react";
+import react from '@vitejs/plugin-react';
 import * as path from 'path';
+import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
 export default defineConfig({
   cacheDir: '../node_modules/.vite/shadcn',
 
   plugins: [
-    react(),
     dts({
       entryRoot: 'src',
       tsConfigFilePath: path.join(__dirname, 'tsconfig.lib.json'),
       skipDiagnostics: true,
     }),
-
+    react(),
     nxViteTsPaths(),
   ],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
 
   // Uncomment this if you are using workers.
   // worker: {
@@ -35,7 +28,7 @@ export default defineConfig({
   build: {
     lib: {
       // Could also be a dictionary or array of multiple entry points.
-      entry: 'src/index.tsx',
+      entry: 'src/index.ts',
       name: 'shadcn',
       fileName: 'index',
       // Change this to the formats you want to support.
@@ -44,7 +37,14 @@ export default defineConfig({
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: [],
+      external: ['react', 'react-dom', 'react/jsx-runtime']
     },
   },
+
+  // resolve: {
+  //   alias: {
+  //     "shadcn": path.resolve(__dirname, "./src"),
+  //   },
+  // },
+
 });

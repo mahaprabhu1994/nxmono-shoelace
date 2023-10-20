@@ -7,7 +7,9 @@ import { useEffect, useRef, useState } from 'react';
 import '../../../../dist/slcore/index';
 import '../../../../dist/slcore/style.css';
 // import "./theme.css";
-import { Button } from '../../../../dist/shadcn/index';
+// import { ButtonComp } from '@supreme/shadcn';
+import { ButtonComp, Shadcn } from '../../../../dist/shadcn/index';
+import '../../../../dist/shadcn/style.css';
 import '../styles.css';
 
 export function App() {
@@ -221,13 +223,14 @@ export function App() {
       </div>
 
       <div>
-        <Button variant="secondary">Welcome to shadcn</Button>
+
       </div>
       <div className='w-[300px] h-[300px] bg-green-300'>
         <h1 >ss</h1>
       </div>
 
-
+      <Shadcn />
+      <ButtonComp />
     </div >
   );
 }

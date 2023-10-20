@@ -1,14 +1,11 @@
 {
-  "extends": "../tsconfig.base.json",
   "compilerOptions": {
-    "jsx": "react",
-    "module": "commonjs",
-    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "allowJs": false,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true
+    "types": ["vite/client"]
   },
   "files": [],
   "include": [],
@@ -17,9 +14,5 @@
       "path": "./tsconfig.lib.json"
     }
   ],
-  "baseUrl": ".",
-  "paths": {
-  "@/*": ["./src/*"]
-}
-
+  "extends": "../tsconfig.base.json"
 }

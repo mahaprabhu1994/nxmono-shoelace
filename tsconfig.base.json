@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@supreme/shadcn": ["shadcn/src/index.ts"],
-      "@supreme/slcore": ["slcore/src/index.ts"]
+      "@supreme/slcore": ["slcore/src/index.ts"],
     }
   },
   "exclude": ["node_modules", "tmp"]

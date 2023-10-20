@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "baseUrl": ".",
+"paths": {
+  "../supreme/shadcn": ["./src/*"]
+}
+
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
